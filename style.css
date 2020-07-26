@@ -1,0 +1,232 @@
+/* CSS files add styling rules to your content */
+
+/* Global variables */
+.module {
+  cursor: url("https://cdn.glitch.com/c425cc08-40b8-4c0d-a44b-e1ae6c00c163%2F9181FCC7-DF5F-4905-A744-18D30BAA9611%203%20(1).png?v=1595728379392"), auto;	
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background: rgb(249, 220, 196);
+  background: linear-gradient(
+    270deg,
+    rgba(249, 220, 196, 1) 0%,
+    rgba(248, 237, 235, 1) 35%,
+    rgba(252, 213, 206, 1) 100%
+  );
+}
+
+h1 {
+  font-style: italic;
+  color: #ffffff;
+  text-align: center;
+}
+
+h5{
+  border-style:dotted;
+  border-color:#f9dcc4;
+}
+
+#header{
+ font-family: 'Kavivanar', cursive;
+  background: rgb(255, 180, 166);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 180, 166, 1) 0%,
+    rgba(252, 213, 206, 1) 35%,
+    rgba(255, 191, 180, 1) 100%
+  );
+  text-align:center;
+}
+
+img{
+  padding-top:10px;
+}
+
+h5 {
+  font-family: helvetica, arial, sans-serif;
+  padding: 10px;
+  margin: 10px;
+  color: #f4acb7;
+  background: #fffffc;
+  text-align: center;
+}
+
+h7 {
+  color: #ffffff;
+  background: rgb(255, 180, 166);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 180, 166, 1) 0%,
+    rgba(255, 191, 180, 1) 35%,
+    rgba(255, 191, 180, 1) 100%
+  );
+  padding: 5px;
+  border-style:inset;
+  border-color:#f9dcc4;
+  font-family: 'Kavivanar', cursive;
+}
+
+/* just gonna try something here */
+
+
+.footer footer{
+  display: flex;
+  align-self: flex-end;
+  
+  
+  background-color:#f4acb7;
+  text-align:center;
+  color:#ffffff;
+  padding:5px;
+/*   position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Kavivanar', cursive;
+}
+
+
+.effect {
+  color: #f4acb7;
+  font-size: 20px;
+  font-family : 'Open Sane Condensed';
+}
+
+#imageuploader {
+  color: #f4acb7;
+  background: #ffffff;
+  padding: 5px;
+  text-align: center;
+  border-style: inset;
+  border-width: 3px;
+  border-color: #f9dcc4;
+  float: left;
+}
+
+#imageuploader:hover {
+  color: #ffffff;
+  background: #FCD5CE;
+}
+
+#imageuploader:active {
+  transform: translateY(2px);
+}
+
+#downloadb {
+  color: #f4acb7;
+  background: #ffffff;
+  padding: 5px;
+  text-align: center;
+  border-style: inset;
+  border-width: 3px;
+  border-color: #f9dcc4;
+  float: right;
+}
+
+#downloadb:hover {
+  color: #ffffff;
+  background: #FCD5CE;
+}
+
+#downloadb:active {
+  transform: translateY(2px);
+}
+
+/* Buttons */
+#imageEditor .titles {
+  margin: 5px;
+  margin-top: 10px;
+}
+
+#imageEditor {
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  float: right;
+  border-style:ridge;
+  border-color:#fcd5ce;
+  margin-bottom:20px;
+}
+
+
+/* this .button controls all the filter buttons cause their in the same class */
+.button {
+  color: #FFFFFF;
+  background-color: #FCD5CE;
+  display: inline-block;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+.button:hover {
+  background-color: #f9dcc4
+}
+
+/* Gallery */
+#gallery {
+  color: #f4acb7;
+  background: #fffffc;
+  text-align: center;
+  font-family: helvetica, arial, sans-serif;
+  margin:10px;
+}
+
+#img1{
+  float:left;
+  padding:1%;
+  width:29%;
+  
+  background: #fffffc;
+  text-align: center;
+  font-family: helvetica, arial, sans-serif;
+  margin:0px;
+  margin-bottom:5%;
+  
+  border-style:dotted;
+  border-color:#f9dcc4;
+  border-size:.5%;
+}
+
+#img2{
+  float:left;
+  padding:1%;
+  width:29%;
+  
+  background: #fffffc;
+  text-align: center;
+  font-family: helvetica, arial, sans-serif;
+  margin-right:1.5%;
+  margin-left:1.5%;
+  margin-bottom:5%;
+  
+  border-style:dotted;
+  border-color:#f9dcc4;
+  border-size:.5%;
+}
+
+#img3{
+  float:left;
+  padding:1%;
+  width:29%;
+  background: #fffffc;
+  text-align: center;
+  font-family: helvetica, arial, sans-serif;
+  margin-bottom:5%;
+  
+  border-style:dotted;
+  border-color:#f9dcc4;
+  border-size:.5%;
+}
+
+/* Media Queries */
