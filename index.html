@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/c425cc08-40b8-4c0d-a44b-e1ae6c00c163%2F9181FCC7-DF5F-4905-A744-18D30BAA9611%202%20(1).png?v=1595728247116"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kavivanar&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--     brightness, exposure, etc font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--p5.js library-->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+
+    <!--image editing js, CamanJS, includes full CamanJS code and plugins-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+    <title>Peach Jams</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        Peach Jams
+        <img
+          src="https://cdn.glitch.com/c425cc08-40b8-4c0d-a44b-e1ae6c00c163%2F9181FCC7-DF5F-4905-A744-18D30BAA9611%203%20(1).png?v=1595728379392"
+          width="40px"
+        />
+      </h1>
+    </div>
+
+    <!--adding description -->
+    <h5>
+      Welcome to Peach Jams! Here, you can customize your own album covers with
+      cool editing features and download them back to your device.
+    </h5>
+
+    <!--gallery-->
+    <!--
+    <div id="gallery">
+      <div id="img1">
+        <figure>
+          <img
+            src="https://cdn.glitch.com/c425cc08-40b8-4c0d-a44b-e1ae6c00c163%2F9181FCC7-DF5F-4905-A744-18D30BAA9611%203%20(1).png?v=1595728379392"
+            alt="instructions 1"
+            width="50"
+          />
+          <figcaption>Upload</figcaption>
+        </figure>
+      </div>
+      <div id="img2">
+        <figure>
+          <img
+            src="https://cdn.glitch.com/c425cc08-40b8-4c0d-a44b-e1ae6c00c163%2F9181FCC7-DF5F-4905-A744-18D30BAA9611%203%20(1).png?v=1595728379392"
+            alt="instructions 2"
+            width="50"
+          />
+          <figcaption>Edit</figcaption>
+        </figure>
+      </div>
+      <div id="img3">
+        <figure>
+          <img
+            src="https://cdn.glitch.com/c425cc08-40b8-4c0d-a44b-e1ae6c00c163%2F9181FCC7-DF5F-4905-A744-18D30BAA9611%203%20(1).png?v=1595728379392"
+            alt="instructions 3"
+            width="50"
+          />
+          <figcaption>Download</figcaption>
+        </figure>
+      </div>
+    </div>
+    -->
+    <br />
+
+    <!--     manual filters -->
+    <div id="art">
+      <div id="imageEditor">
+        <div class="titles">
+          <h7 onclick="showOptions();">
+            Lighting Adjustments
+          </h7>
+        </div>
+        <div id="brightnessRange">
+          <br />
+          <label class="effect" for="brightness">Brightness</label><br />
+          <button class="button" onclick="lowerBrightnessEffect()">Decrease</button>
+          <button class="button" onclick="brightnessEffect()">Increase</button>
+        </div>
+
+        <div id="exposureRange">
+          <label class="effect" for="exposure">Exposure</label><br />
+                    <button class="button" onclick="lowerExposureEffect()">
+            Decrease
+          </button>
+          <button class="button" onclick="exposureEffect()">Increase</button>
+
+          <br />
+        </div>
+
+        <div id="contrastRange">
+          <label class="effect" for="contrast">Contrast</label><br />
+                    <button class="button" onclick="lowerContrastEffect()">
+            Decrease
+          </button>
+
+          <button class="button" onclick="contrastEffect()">Increase</button>
+
+        </div>
+
+        <br />
+
+        <div class="titles">
+          <h7 onclick="showOptions();">Color Adjustments</h7>
+        </div>
+
+        <div id="hueRange">
+          <br />
+          <label class="effect" for="hue">Hue</label><br />
+          <button class="button" onclick="lowerHueEffect()">Decrease</button>
+          <button class="button" onclick="hueEffect()">Increase</button>
+
+          <br />
+        </div>
+
+        <div id="vibranceRange">
+          <label class="effect" for="vibrance">Vibrance</label><br />
+          <button class="button" onclick="lowerVibranceEffect()">Decrease</button>
+          <button class="button" onclick="vibranceEffect()">Increase</button>
+          <br />
+        </div>
+
+        <div id="saturationRange">
+          <label class="effect" for="saturation">Saturation</label><br />
+          
+          <button class="button" onclick="lowerSaturationEffect()">
+            Decrease
+          </button>
+          <button class="button" onclick="saturationEffect()">Increase</button>
+          <br />
+        </div>
+
+        <div id="sepiaRange">
+          <label class="effect" for="grayscale">Sepia</label><br />
+          <button class="button" onclick="lowerSepiaEffect()">Decrease</button>
+          <button class="button" onclick="sepiaEffect()">Increase</button>
+          
+          <br />
+        </div>
+
+        <div class="titles">
+          <h7>Filters</h7>
+        </div>
+
+        <div id="filters">
+          <br />
+          <button class="button" onclick="greyscale()">Greyscale</button>
+          <button class="button" onclick="invert()">Invert</button>
+          <button class="button" onclick="herMajesty()">Her Majesty</button>
+          <br />
+          <button class="button" onclick="vintage()">Vintage</button>
+          <button class="button" onclick="lomo()">Lomo</button>
+          <button class="button" onclick="crossProcess()">Cross Process</button>
+          <br />
+          <button class="button" onclick="clarity()">Clarity</button>
+          <button class="button" onclick="sinCity()">Sin City</button>
+          <button class="button" onclick="sunrise()">Sunrise</button>
+          <br />
+          <button class="button" onclick="love()">Love</button>
+          <button class="button" onclick="grungy()">Grungy</button>
+          <button class="button" onclick="glowingSun()">Glowing Sun</button>
+          <br />
+          <button class="button" onclick="orangePeel()">Orange Peel</button>
+          <button class="button" onclick="jarques()">Jarques</button>
+          <button class="button" onclick="pinhole()">Pinhole</button>
+          <br />
+          <button class="button" onclick="oldBoot()">Old Boot</button>
+          <button class="button" onclick="hazyDays()">Hazy Days</button>
+          <button class="button" onclick="nostalgia()">Nostalgia</button>
+          <br />
+          <button class="button" onclick="hemingway()">Hemingway</button>
+          <button class="button" onclick="grungy()">Concentrate</button>
+          <br />
+        </div>
+
+        <div class="titles">
+          <h7>Other</h7>
+
+          <div id="blur">
+            <br />
+            <label class="effect" for="blur">Blur</label> <br />
+            <button class="button" onclick="lowerBlur()">Decrease</button>
+            <button class="button" onclick="addBlur()">Increase</button>
+            
+            <br />
+          </div>
+        </div>
+
+        <label class="effect">Noise</label>
+        <br />
+        <button class="button" onclick="addNoise()">Increase</button>
+
+        <br />
+        <!--         <button class = "button" onclick="download()">Download</button> -->
+      </div>
+
+      <!--form to upload User image-->
+      <!-- code we had for image uploader
+      <p>
+        <input
+          type="file"
+          accept="image/*"
+          name="image"
+          id="files"
+          onchange="loadFile(event)"
+          style="display: none;"
+        />
+        <script>
+          const fileSelector = document.getElementById("files");
+          files.addEventListener("change", event => {
+            const fileList = event.target.files;
+            console.log(fileList);
+          });
+        </script>
+      </p>
+      <p id="imageuploader">
+        <label for="file" style="cursor: pointer;">Upload Image</label>
+              <p><img id="output" onclick="imgSize();" /></p>
+      </p>
+
+**
+
+<p id="imageuploader"><label for="file" style="cursor: pointer;">Upload Image</label></p>
+      <p><img id="output" width="200" /></p>
+
+    -->
+      <!-- 
+      <p>
+        <input
+          type="file"
+          accept="image/*"
+          name="image"
+          id="file"
+          onchange="loadFile(event)"
+          style="display: none;"
+        />
+      </p>
+      <p id="imageuploader"><label for="file" style="cursor: pointer;">Upload Image</label></p>
+      <p><img id="output" onclick="imgSize();"/></p>
+
+      <script>
+        var loadFile = function(event) {
+          var image = document.getElementById("output");
+          image.src = URL.createObjectURL(event.target.files[0]);
+        };
+      </script> 
+      -->
+      <p>
+        <input
+          type="file"
+          accept="image/*"
+          name="image"
+          id="file"
+          onchange="loadFile(event)"
+          style="display: none;"
+        />
+      </p>
+      <p id="imageuploader">
+        <label for="file" style="cursor: pointer;">Upload Image</label>
+      </p>
+      <p><img id="output"  onclick="imgSize();" /></p>
+
+      
+      
+      
+      
+      <!--form to download User image-->
+      
+      
+
+      <button onclick="download()" style="display: none;" id="downloadButton">
+        Download
+      </button>
+      <p id="downloadb">
+        <label for="downloadButton" style="cursor:pointer;">Download</label>
+      </p>
+    </div>
+    
+
+
+    <div class="footer">
+      <footer>
+        <p id="footer">
+          Peach Jams &copy; 2020
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
