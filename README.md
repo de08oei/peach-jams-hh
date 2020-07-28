@@ -36,7 +36,3 @@ This CSS file shows you how we implemented pretty designs and awesome styling.
 
 This JavaScript file shares the interactivity of our project and its features.
 
-
-Created in [Glitch](https://glitch.com/)
--------------------
-
